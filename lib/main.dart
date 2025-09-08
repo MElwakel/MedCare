@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:medcare/features/auth/presentaion/views/forgot_password_view.dart';
 
 import 'generated/l10n.dart';
 
@@ -23,9 +24,9 @@ class MedCare extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
 
-      locale: Locale("ar"),
+      locale: Locale("en"),
 
-      home: Scaffold(),
+      home: ForgotPasswordView(),
     );
   }
 }
