@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LockImageWidget extends StatelessWidget {
-  const LockImageWidget({super.key});
+  const LockImageWidget({super.key, required this.icon});
+
+ final  IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class LockImageWidget extends StatelessWidget {
                 ),
               ],
             ),
-            child:const  Icon(Icons.lock_person,size: 32,color: Colors.white,),
+            child:  Icon(  icon,size: 32,color: Colors.white,),
           ),
 
         )
