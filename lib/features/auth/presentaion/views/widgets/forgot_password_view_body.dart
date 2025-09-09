@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
 
-import 'lock_widget.dart';
+import 'lock_image_widget.dart';
 
 class ForgotPasswordViewBody extends StatelessWidget {
   const ForgotPasswordViewBody({super.key});
@@ -16,7 +16,9 @@ class ForgotPasswordViewBody extends StatelessWidget {
           child: Column(
             children: const [
               SizedBox(height: 30),
-              LockImageWidget(),
+              LockImageWidget(
+                icon: Icons.lock,
+              ),
               SizedBox(height: 50),
               Text(
                 "Forgot Password ?",
