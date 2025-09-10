@@ -32,7 +32,7 @@ class _GovernorateCityPickerState extends State<GovernorateCityPicker> {
       children: [
         // Governorate
         DropdownButtonFormField<String>(
-          initialValue: selectedGovernorate,
+          value: selectedGovernorate,
           decoration: InputDecoration(
             prefixIcon: const Icon(
               Icons.location_city,
@@ -64,7 +64,7 @@ class _GovernorateCityPickerState extends State<GovernorateCityPicker> {
 
         // City
         DropdownButtonFormField<String>(
-          initialValue: selectedCity,
+          value: selectedCity,
           decoration: InputDecoration(
             prefixIcon: const Icon(Icons.place, color: Color(0xff0E7885)),
             labelText: "City",

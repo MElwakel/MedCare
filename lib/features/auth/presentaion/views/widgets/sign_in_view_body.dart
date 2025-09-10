@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
-import 'package:medcare/core/widgets/password_text_field.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/dont_have_an_account_widget.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
 import 'package:medcare/generated/l10n.dart';
@@ -44,17 +43,17 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           ),
           const SizedBox(height: 32),
           CustomTextFormField(
-            hintText: S.of(context).email, 
+            labelText: S.of(context).email, 
             iconData:  Icons.email_outlined, 
             textInputType: TextInputType.emailAddress
             
           ),
           const SizedBox(height: 16),
-          PasswordTextFormField(
-            hintText: S.of(context).password,
+          CustomTextFormField(
+            labelText: S.of(context).password,
             iconData: Icons.lock_outline,
             textInputType: TextInputType.visiblePassword,
-            
+            isPassword: true,
           ),
           const SizedBox(height: 24),
           CustomButton(
