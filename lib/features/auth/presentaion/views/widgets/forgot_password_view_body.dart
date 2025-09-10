@@ -16,9 +16,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
           child: Column(
             children: const [
               SizedBox(height: 30),
-              LockImageWidget(
-                icon: Icons.lock,
-              ),
+              LockImageWidget(icon: Icons.person),
               SizedBox(height: 50),
               Text(
                 "Forgot Password ?",
@@ -39,13 +37,12 @@ class ForgotPasswordViewBody extends StatelessWidget {
               ),
               SizedBox(height: 50),
               CustomTextFormField(
-                hintText: "Email",
+                labelText: "Email",
                 iconData: Icons.email_outlined,
                 textInputType: TextInputType.emailAddress,
               ),
               SizedBox(height: 16),
               CustomButton(text: "Send me email"),
-
             ],
           ),
         ),
