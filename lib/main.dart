@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:medcare/features/auth/presentaion/views/forgot_password_view.dart';
 import 'package:medcare/features/auth/presentaion/views/email_verify_view.dart';
 import 'package:medcare/features/auth/presentaion/views/phone_verify_view.dart';
+import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
 import 'package:medcare/features/auth/presentaion/views/verify_your_identity_view.dart';
 
 import 'generated/l10n.dart';
@@ -29,7 +30,7 @@ class MedCare extends StatelessWidget {
 
       locale: Locale("en"),
 
-      home: PhoneVerifyView(),
+      home: SignInView(),
     );
   }
 }

@@ -54,9 +54,69 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `welcome`
-  String get title {
-    return Intl.message('welcome', name: 'title', desc: '', args: []);
+  /// `Welcome`
+  String get welcome {
+    return Intl.message('Welcome', name: 'welcome', desc: '', args: []);
+  }
+
+  /// `Sign in to your account`
+  String get signInToYourAccount {
+    return Intl.message(
+      'Sign in to your account',
+      name: 'signInToYourAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
+  }
+
+  /// `Forgot your password?`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot your password?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or continue with social account`
+  String get orContinueWithSocialAccount {
+    return Intl.message(
+      'Or continue with social account',
+      name: 'orContinueWithSocialAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account? `
+  String get dontHaveAnAccount {
+    return Intl.message(
+      'Don\'t have an account? ',
+      name: 'dontHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
   }
 }
 

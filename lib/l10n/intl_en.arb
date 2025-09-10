@@ -1,3 +1,11 @@
 {
-  "title" :"welcome"
+  "welcome" :"Welcome",
+  "signInToYourAccount" : "Sign in to your account",
+  "email" : "Email",
+  "password" : "Password",
+  "signIn" : "Sign In",
+  "forgotPassword" : "Forgot your password?",
+  "orContinueWithSocialAccount" : "Or continue with social account",
+  "dontHaveAnAccount" : "Don't have an account? ",
+  "signUp" : "Sign Up"
 }

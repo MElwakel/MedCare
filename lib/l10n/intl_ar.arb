@@ -1,4 +1,11 @@
 {
-  "title" :"اهلاً بكَ"
-
+  "welcome" :"اهلاً بكَ",
+  "signInToYourAccount" : "تسجيل الدخول إلى حسابك",
+  "email" : "البريد الإلكتروني",
+  "password" : "كلمة المرور",
+  "signIn" : "تسجيل الدخول",
+  "forgotPassword" : "هل نسيت كلمة المرور؟",
+  "orContinueWithSocialAccount" : "أو المتابعة بحساب التواصل الاجتماعي",
+  "dontHaveAnAccount" : "ليس لديك حساب؟ ",
+  "signUp" : "إنشاء حساب"
 }
