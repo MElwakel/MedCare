@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.medcare"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.11721702"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
