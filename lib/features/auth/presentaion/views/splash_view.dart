@@ -10,14 +10,17 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashView> {
-  @override
+
   @override
   void initState() {
+    super.initState();
     Future.delayed(Duration(seconds: 2),(){
      Navigator.pushReplacement(context,
       MaterialPageRoute(builder: (context)=>SignInView()),);
     },);
   }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
