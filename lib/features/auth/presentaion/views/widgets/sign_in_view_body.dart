@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
+import 'package:medcare/core/widgets/password_text_filed.dart';
+import 'package:medcare/features/auth/presentaion/views/verify_your_identity_view.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/dont_have_an_account_widget.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
 import 'package:medcare/generated/l10n.dart';
+
+import '../../../../home/presentation/views/home_view.dart';
 
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({super.key});
@@ -13,7 +17,6 @@ class SignInViewBody extends StatefulWidget {
 }
 
 class _SignInViewBodyState extends State<SignInViewBody> {
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -43,27 +46,31 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           ),
           const SizedBox(height: 32),
           CustomTextFormField(
-            labelText: S.of(context).email, 
-            iconData:  Icons.email_outlined, 
-            textInputType: TextInputType.emailAddress
-            
+            hintText: S.of(context).email,
+            iconData: Icons.email_outlined,
+            textInputType: TextInputType.emailAddress,
           ),
           const SizedBox(height: 16),
-          CustomTextFormField(
-            labelText: S.of(context).password,
-            iconData: Icons.lock_outline,
-            textInputType: TextInputType.visiblePassword,
-            isPassword: true,
-          ),
+          PasswordTextFormField(hintText: S.of(context).password),
           const SizedBox(height: 24),
           CustomButton(
             text: S.of(context).signIn,
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeView()),
+              );
+            },
           ),
           const SizedBox(height: 16),
           Center(
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => VerifyYourIdentity()),
+                );
+              },
               child: Text(
                 S.of(context).forgotPassword,
                 style: TextStyle(

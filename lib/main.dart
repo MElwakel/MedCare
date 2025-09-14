@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:medcare/features/auth/presentaion/views/splash_view.dart';
+import 'package:medcare/features/splash/splash_view.dart';
 
 
 import 'generated/l10n.dart';

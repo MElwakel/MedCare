@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/auth/presentaion/views/verify_your_code_view.dart';
+
+import '../../../../core/widgets/custom_button.dart';
 
 class PhoneVerifyView extends StatelessWidget {
   const PhoneVerifyView({super.key});
@@ -58,6 +61,17 @@ class PhoneVerifyViewBody extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 16,
+              ),
+              CustomButton(text: "Verify your phone number",  onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => VerifyYourCodeView(),
+                  ),
+                );
+              },)
             ],
           ),
         ),

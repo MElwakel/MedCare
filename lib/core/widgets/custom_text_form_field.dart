@@ -1,68 +1,45 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFormField extends StatefulWidget {
+class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.labelText,
+    this.onSaved,
+    required this.hintText,
     required this.iconData,
-    required this.textInputType,
-    this.isPassword = false,
-    this.controller,
-    this.validator,
+    required this.textInputType,  this.isPassword  = false ,
   });
 
-  final String labelText;
+  final void Function(String?)? onSaved;
+  final String hintText;
   final IconData iconData;
   final TextInputType textInputType;
-  final bool isPassword;
-  final TextEditingController? controller;
-  final String? Function(String?)? validator;
-
-  @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
-}
-
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
-  bool _obscure = true;
-
+  final bool isPassword ;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: widget.controller,
-      validator: widget.validator,
-      keyboardType: widget.textInputType,
-      cursorColor: const Color(0xff0E7885),
-      obscureText: widget.isPassword ? _obscure : false,
+      validator: (value) {
+        if(value!.isEmpty){
+          return "this is required";
+        }
+        return null;
+      },
+      obscureText: isPassword ,
+      onSaved: onSaved,
+      keyboardType: textInputType,
       decoration: InputDecoration(
-        prefixIcon: Icon(widget.iconData, color: const Color(0xff0E7885)),
-        labelText: widget.labelText,
-        labelStyle: const TextStyle(color: Colors.grey),
-        border: buildOutlineInputBorder(Colors.grey),
-        enabledBorder: buildOutlineInputBorder(Colors.grey),
-        focusedBorder: buildOutlineInputBorder(const Color(0xff0E7885)),
-        errorBorder: buildOutlineInputBorder(Colors.red),
-        focusedErrorBorder: buildOutlineInputBorder(Colors.red),
-        suffixIcon: widget.isPassword
-            ? IconButton(
-                icon: Icon(
-                  _obscure ? Icons.visibility_off : Icons.visibility,
-                  color: Colors.grey,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _obscure = !_obscure;
-                  });
-                },
-              )
-            : null,
+        prefixIcon: Icon(iconData,color: Color(0xff0E7885),),
+        hintText: hintText,
+        border: buildOutlineInputBorder(),
+        enabledBorder: buildOutlineInputBorder(),
+        focusedBorder: buildOutlineInputBorder(),
       ),
     );
   }
 
-  OutlineInputBorder buildOutlineInputBorder(Color color) {
+  OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(16),
-      borderSide: BorderSide(color: color, width: 1.2),
+      borderSide: BorderSide(color: Colors.grey),
     );
   }
 }

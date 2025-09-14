@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
+import 'package:medcare/core/widgets/password_text_filed.dart';
+import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/governorate_city_picker.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -15,11 +17,11 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController =
-      TextEditingController();
+  // final TextEditingController _nameController = TextEditingController();
+  // final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _passwordController = TextEditingController();
+  // final TextEditingController _confirmPasswordController =
+  //     TextEditingController();
   final TextEditingController _dobController = TextEditingController();
 
   Future<void> _pickDateOfBirth() async {
@@ -131,11 +133,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                   // Full Name
                   CustomTextFormField(
-                    labelText: "Full Name",
+                    hintText: "Full Name",
                     iconData: Icons.person_outline,
                     textInputType: TextInputType.name,
-                    controller: _nameController,
-                    validator: _validateName,
                   ),
 
                   const SizedBox(height: 15),
@@ -143,16 +143,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     onTap: _pickDateOfBirth,
                     child: AbsorbPointer(
                       child: CustomTextFormField(
-                        labelText: "Date of Birth",
+                        hintText: "Date of Birth",
                         iconData: Icons.calendar_month,
                         textInputType: TextInputType.datetime,
-                        controller: _dobController,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Date of Birth is required";
-                          }
-                          return null;
-                        },
                       ),
                     ),
                   ),
@@ -172,38 +165,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   const SizedBox(height: 15),
                   CustomTextFormField(
-                    labelText: "Email",
+                    hintText: "Email",
                     iconData: Icons.email_outlined,
                     textInputType: TextInputType.emailAddress,
-                    controller: _emailController,
-                    validator: _validateEmail,
                   ),
 
                   const SizedBox(height: 15),
 
-                  CustomTextFormField(
-                    labelText: "Password",
-                    iconData: Icons.lock_outline,
-                    textInputType: TextInputType.visiblePassword,
-                    isPassword: true,
-                    controller: _passwordController,
-                    validator: _validatePassword,
+                  PasswordTextFormField(
+                    hintText: "Password",
+
                   ),
                   const SizedBox(height: 15),
-                  CustomTextFormField(
-                    labelText: "Confirm Password",
-                    iconData: Icons.lock_outline,
-                    textInputType: TextInputType.visiblePassword,
-                    isPassword: true,
-                    controller: _confirmPasswordController,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Confirm Password is required";
-                      } else if (value != _passwordController.text) {
-                        return "Passwords do not match";
-                      }
-                      return null;
-                    },
+                  PasswordTextFormField(
+                    hintText: "Confirm Password",
+
                   ),
 
                   const SizedBox(height: 20),
@@ -244,7 +220,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       const Text("Already have an account? "),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SignInView(),));
+                        },
                         child: const Text(
                           "Sign In",
                           style: TextStyle(
