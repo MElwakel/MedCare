@@ -5,9 +5,9 @@ import 'package:medcare/core/widgets/password_text_filed.dart';
 import 'package:medcare/features/auth/presentaion/views/verify_your_identity_view.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/dont_have_an_account_widget.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
+import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
 import 'package:medcare/generated/l10n.dart';
 
-import '../../../../home/presentation/views/home_view.dart';
 
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({super.key});
@@ -58,7 +58,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeView()),
+                MaterialPageRoute(builder: (context) => DoctorsView()),
               );
             },
           ),
