@@ -7,9 +7,8 @@ class DoctorsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DoctorsViewBody(),
+      body: SafeArea(child: DoctorsViewBody()),
     );
   }
 }
-
 
