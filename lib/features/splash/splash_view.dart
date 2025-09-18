@@ -15,6 +15,7 @@ class _SplashScreenState extends State<SplashView> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2),(){
+     // ignore: use_build_context_synchronously
      Navigator.pushReplacement(context,
       MaterialPageRoute(builder: (context)=>SignInView()),);
     },);

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
 import 'package:medcare/core/widgets/password_text_filed.dart';
 import 'package:medcare/features/auth/presentaion/views/verify_your_identity_view.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/dont_have_an_account_widget.dart';
+import 'package:medcare/features/auth/presentaion/views/widgets/social_button.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
 import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
 import 'package:medcare/generated/l10n.dart';
-
 
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({super.key});
@@ -82,9 +83,28 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           ),
           const SizedBox(height: 16),
           OrDivider(),
-          const SizedBox(height: 32),
-          DontHaveAnAccountWidget(),
           const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SocialButton(
+                iconData: FontAwesomeIcons.google,
+                color: Colors.red,
+                text: "Google",
+                onPressed: () {},
+              ),
+              const SizedBox(width: 10),
+              SocialButton(
+                iconData: FontAwesomeIcons.facebook,
+                color: Colors.blue,
+                text: "Facebook",
+                onPressed: () {},
+              ),
+            ],
+          ),
+          const SizedBox(height: 32),
+
+          DontHaveAnAccountWidget(),
         ],
       ),
     );

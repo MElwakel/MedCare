@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:medcare/features/splash/splash_view.dart';
 
-
 import 'generated/l10n.dart';
 
 void main() {
@@ -25,7 +24,7 @@ class MedCare extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
 
-      locale: Locale("en"),
+      locale: Locale("ar"),
 
       home: SplashView(),
     );
