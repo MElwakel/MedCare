@@ -1,11 +1,16 @@
 {
   "welcome" :"Welcome",
   "signInToYourAccount" : "Sign in to your account",
+  "fullName" : "Full Name",
   "email" : "Email",
   "password" : "Password",
+  "confirmPassword" : "Confirm Password",
   "signIn" : "Sign In",
   "forgotPassword" : "Forgot your password?",
   "orContinueWithSocialAccount" : "Or continue with social account",
   "dontHaveAnAccount" : "Don't have an account? ",
-  "signUp" : "Sign Up"
+  "alreadyHaveAnAccount" : "Already have an account? ",
+  "signUp" : "Sign Up",
+  "joinMediCare" : "Join MediCare!",
+  "signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime" : "Sign up easily, book your medical consultation, and stay healthy anytime"
 }

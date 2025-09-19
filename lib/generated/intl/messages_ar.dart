@@ -39,5 +39,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "welcome": MessageLookupByLibrary.simpleMessage("اهلاً بكَ"),
+    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "هل لديك حساب؟ ",
+    ),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage(
+      "تأكيد كلمة المرور",
+    ),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "joinMediCare": MessageLookupByLibrary.simpleMessage("انضم إلى MediCare!"),
+    "signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime":
+        MessageLookupByLibrary.simpleMessage(
+          "سجل بسهولة، احجز استشارتك الطبية، وابقَ بصحة جيدة في أي وقت",
+        ),
   };
 }

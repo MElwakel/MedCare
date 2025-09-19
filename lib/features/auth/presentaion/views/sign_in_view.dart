@@ -9,15 +9,14 @@ class SignInView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).signIn,style: TextStyle(
-          fontSize: 19,
-          fontWeight: FontWeight.bold
-        ),),
+        automaticallyImplyLeading: false,
+        title: Text(
+          S.of(context).signIn,
+          style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
-      body: SafeArea(
-        child: SignInViewBody()
-      ),
+      body: SafeArea(child: SignInViewBody()),
     );
   }
 }

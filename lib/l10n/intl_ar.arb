@@ -7,5 +7,11 @@
   "forgotPassword" : "هل نسيت كلمة المرور؟",
   "orContinueWithSocialAccount" : "أو المتابعة بحساب التواصل الاجتماعي",
   "dontHaveAnAccount" : "ليس لديك حساب؟ ",
-  "signUp" : "إنشاء حساب"
+  "signUp" : "إنشاء حساب",
+  "fullName" : "الاسم الكامل",
+  "confirmPassword" : "تأكيد كلمة المرور",
+  "alreadyHaveAnAccount" : "هل لديك حساب؟ ",
+  "joinMediCare" : "انضم إلى MediCare!",
+  "signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime" : "سجل بسهولة، احجز استشارتك الطبية، وابقَ بصحة جيدة في أي وقت"
+
 }
