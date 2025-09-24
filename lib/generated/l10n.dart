@@ -58,32 +58,6 @@ class S {
   String get welcome {
     return Intl.message('Welcome', name: 'welcome', desc: '', args: []);
   }
-  /// `Join MediCare!`
-  String get joinMediCare {
-    return Intl.message('Join MediCare!', name: 'joinMediCare', desc: '', args: []);
-  }
-  /// `Sign up easily, book your medical consultation, and stay healthy anytime`
-  String get signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime {
-    return Intl.message('Sign up easily, book your medical consultation, and stay healthy anytime', name: 'signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime', desc: '', args: []);
-  }
-  /// `Full Name`
-  String get fullName {
-    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
-  }
-  /// `Confirm Password`
-  String get confirmPassword {
-    return Intl.message('Confirm Password', name: 'confirmPassword', desc: '', args: []);
-  }
-  /// `Already have an account? `
-  String get alreadyHaveAnAccount {
-    return Intl.message(
-      'Already have an account? ',
-      name: 'alreadyHaveAnAccount',
-      desc: '',
-      args: [],
-    );
-  }
-
 
   /// `Sign in to your account`
   String get signInToYourAccount {
@@ -95,6 +69,11 @@ class S {
     );
   }
 
+  /// `Full Name`
+  String get fullName {
+    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
+  }
+
   /// `Email`
   String get email {
     return Intl.message('Email', name: 'email', desc: '', args: []);
@@ -104,7 +83,16 @@ class S {
   String get password {
     return Intl.message('Password', name: 'password', desc: '', args: []);
   }
-  ///
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Sign In`
   String get signIn {
@@ -141,9 +129,39 @@ class S {
     );
   }
 
+  /// `Already have an account? `
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Sign Up`
   String get signUp {
     return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Join MediCare!`
+  String get joinMediCare {
+    return Intl.message(
+      'Join MediCare!',
+      name: 'joinMediCare',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up easily, book your medical consultation, and stay healthy anytime`
+  String get signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime {
+    return Intl.message(
+      'Sign up easily, book your medical consultation, and stay healthy anytime',
+      name: 'signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime',
+      desc: '',
+      args: [],
+    );
   }
 }
 

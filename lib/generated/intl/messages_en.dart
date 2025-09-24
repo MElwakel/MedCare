@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "Already have an account? ",
+    ),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
@@ -29,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
     ),
+    "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "joinMediCare": MessageLookupByLibrary.simpleMessage("Join MediCare!"),
     "orContinueWithSocialAccount": MessageLookupByLibrary.simpleMessage(
       "Or continue with social account",
     ),
@@ -38,6 +44,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sign in to your account",
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime":
+        MessageLookupByLibrary.simpleMessage(
+          "Sign up easily, book your medical consultation, and stay healthy anytime",
+        ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
   };
 }

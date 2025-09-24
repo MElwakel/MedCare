@@ -22,6 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "هل لديك حساب؟ ",
+    ),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage(
+      "تأكيد كلمة المرور",
+    ),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب؟ ",
     ),
@@ -29,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
     ),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "joinMediCare": MessageLookupByLibrary.simpleMessage("انضم إلى MediCare!"),
     "orContinueWithSocialAccount": MessageLookupByLibrary.simpleMessage(
       "أو المتابعة بحساب التواصل الاجتماعي",
     ),
@@ -38,18 +46,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل الدخول إلى حسابك",
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
-    "welcome": MessageLookupByLibrary.simpleMessage("اهلاً بكَ"),
-    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
-      "هل لديك حساب؟ ",
-    ),
-    "confirmPassword": MessageLookupByLibrary.simpleMessage(
-      "تأكيد كلمة المرور",
-    ),
-    "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
-    "joinMediCare": MessageLookupByLibrary.simpleMessage("انضم إلى MediCare!"),
     "signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime":
         MessageLookupByLibrary.simpleMessage(
           "سجل بسهولة، احجز استشارتك الطبية، وابقَ بصحة جيدة في أي وقت",
         ),
+    "welcome": MessageLookupByLibrary.simpleMessage("اهلاً بكَ"),
   };
 }
