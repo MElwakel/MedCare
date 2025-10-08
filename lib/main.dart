@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:medcare/features/home/presentation/views/medical_services_view.dart';
+import 'package:medcare/features/splash/splash_view.dart';
 
 // import 'package:medcare/features/splash/splash_view.dart';
 
@@ -25,8 +25,8 @@ class MedCare extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      locale: Locale('ar'),
-      home: const MedicalServicesView(),
+      locale: Locale('en'),
+      home: const SplashView(),
     );
   }
 }

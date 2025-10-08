@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/pharmacy/pharmacy_view.dart';
 
 class BuildCategory extends StatelessWidget {
   const BuildCategory({super.key});
@@ -6,20 +7,46 @@ class BuildCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildCategory(Icons.medical_services_outlined, "Doctor"),
-                      _buildCategory(Icons.local_pharmacy_outlined, "Pharmacy"),
-                      _buildCategory(Icons.local_hospital_outlined, "Hospital"),
-                      _buildCategory(Icons.emergency_outlined, "Ambulance"),
-                    ],
-                  );
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        GestureDetector(
+          onTap: () {},
+          child: _buildCategory(Icons.medical_services_outlined, "Doctor"),
+        ),
+
+        // ------الصيدليات
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PharmacyView(),
+              ),
+            );
+          },
+          child: _buildCategory(Icons.local_pharmacy_outlined, "Pharmacy"),
+        ),
+
+
+        GestureDetector(
+          onTap: () {},
+          child: _buildCategory(Icons.local_hospital_outlined, "Hospital"),
+        ),
+
+
+        GestureDetector(
+          onTap: () {},
+          child: _buildCategory(Icons.emergency_outlined, "Ambulance"),
+        ),
+      ],
+    );
   }
 }
 
-
-Widget _buildCategory(IconData icon, String label) {
-    return Column(
+Widget _buildCategory(IconData icon, String label, {VoidCallback? onTap}) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Column(
       children: [
         Container(
           height: 50,
@@ -36,7 +63,6 @@ Widget _buildCategory(IconData icon, String label) {
           style: const TextStyle(fontSize: 13, color: Colors.black87),
         ),
       ],
-    );
-  }
-
-
+    ),
+  );
+}
