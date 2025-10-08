@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
+import 'package:medcare/features/home/presentation/views/home_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashView> {
     Future.delayed(Duration(seconds: 2),(){
      // ignore: use_build_context_synchronously
      Navigator.pushReplacement(context,
-      MaterialPageRoute(builder: (context)=>SignInView()),);
+      MaterialPageRoute(builder: (context)=>HomePage()),);
     },);
   }
 

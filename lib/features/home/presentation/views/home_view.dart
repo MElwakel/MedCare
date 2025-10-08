@@ -1,35 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/home/presentation/views/home_view_body.dart';
+import 'package:medcare/features/home/presentation/widgets/button_navigation_bar.dart';
+import 'package:medcare/features/home/presentation/widgets/doctors_list_view.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          children: [
-            Image.asset("assets/images/logo.png"),
-            Text(
-              "Welcome to",
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: "LibreBaskerville",
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              "Home",
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: "LibreBaskerville",
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
+      backgroundColor: const Color(0xffF7F9FB),
+      body:HomeViewBody(),
+
+      // ===== Bottom Navigation Bar =====
+      bottomNavigationBar:ButtonNavigationBar()
     );
   }
+
+  
 }
