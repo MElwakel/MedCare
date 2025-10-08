@@ -51,13 +51,15 @@ class AppTheme {
       ),
       hintStyle: const TextStyle(color: Colors.grey),
     ),
-    cardTheme: CardTheme(
-      color: Colors.white,
-      elevation: 3,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
+cardTheme: const CardThemeData(
+  color: Colors.white,
+  shadowColor: Colors.grey,
+  elevation: 4,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(15)),
+  ),
+),
+
   );
 
   // 🌙 Dark Theme
@@ -106,12 +108,14 @@ class AppTheme {
       ),
       hintStyle: TextStyle(color: Colors.grey[400]),
     ),
-    cardTheme: CardTheme(
-      color: Colors.grey[850],
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
+cardTheme: const CardThemeData(
+  color: Colors.white,
+  shadowColor: Colors.grey,
+  elevation: 4,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(15)),
+  ),
+),
+
   );
 }
