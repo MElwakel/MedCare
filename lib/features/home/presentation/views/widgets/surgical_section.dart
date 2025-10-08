@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/generated/l10n.dart';
 import 'location_fields.dart';
+import 'custom_dropdown_field.dart';
 
 class SurgicalSection extends StatelessWidget {
   final S s;
@@ -31,7 +32,7 @@ class SurgicalSection extends StatelessWidget {
   });
 
   InputDecoration _dec(String label) => InputDecoration(
-        labelText: label,
+        hintText: label,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         filled: true,
         fillColor: Colors.grey[100],
@@ -41,39 +42,33 @@ class SurgicalSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        DropdownButtonFormField<String>(
+        CustomDropdownField<String>(
           value: selectedOperationType,
-          hint: Text(s.selectOperationType),
-          items: operationTypes
-              .map((type) => DropdownMenuItem(value: type, child: Text(type)))
-              .toList(),
-          onChanged: (value) => onChanged(value, null, selectedGovernorate, selectedArea),
-          decoration: _dec(s.operationType),
+          hintText: s.selectOperationType,
+          label: s.operationType,
+          items: operationTypes,
+          onChanged: (value) =>
+              onChanged(value, null, selectedGovernorate, selectedArea),
         ),
         const SizedBox(height: 12),
-DropdownButtonFormField<String>(
-  value: selectedService,
-  hint: Text(s.selectOperation),
-  items: (selectedOperationType != null
-          ? (surgicalOperations[selectedOperationType] ?? [])
-          : [])
-      .map((op) => DropdownMenuItem<String>(
-            value: op as String,
-            child: Text(op),
-          ))
-      .toList(),
-  onChanged: (value) =>
-      onChanged(selectedOperationType, value, selectedGovernorate, selectedArea),
-  decoration: _dec(s.operation),
-),
-
+        CustomDropdownField<String>(
+          value: selectedService,
+          hintText: s.selectOperation,
+          label: s.operation,
+          items: (selectedOperationType != null
+              ? (surgicalOperations[selectedOperationType] ?? [])
+              : []),
+          onChanged: (value) =>
+              onChanged(selectedOperationType, value, selectedGovernorate, selectedArea),
+        ),
         const SizedBox(height: 12),
         LocationFields(
           governorates: governorates,
           areas: areas,
           selectedGovernorate: selectedGovernorate,
           selectedArea: selectedArea,
-          onChanged: (gov, area) => onChanged(selectedOperationType, selectedService, gov, area),
+          onChanged: (gov, area) =>
+              onChanged(selectedOperationType, selectedService, gov, area),
         ),
         const SizedBox(height: 12),
         TextField(

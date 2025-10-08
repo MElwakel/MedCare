@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/generated/l10n.dart';
+import 'custom_dropdown_field.dart';
 
 class LocationFields extends StatelessWidget {
   final List<String> governorates;
@@ -17,49 +18,34 @@ class LocationFields extends StatelessWidget {
     required this.onChanged,
   });
 
-  InputDecoration _dec(String label) => InputDecoration(
-        labelText: label,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-        filled: true,
-        fillColor: Colors.grey[100],
-      );
-
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
     return Row(
       children: [
         Expanded(
-          child: DropdownButtonFormField<String>(
+          child: CustomDropdownField<String>(
             value: selectedGovernorate,
-            hint: Text(s.governorate),
-            items: governorates
-                .map((e) => DropdownMenuItem(value: e, child: Text(e)))
-                .toList(),
+            hintText: s.governorate,
+            label: s.governorate,
+            items: governorates,
             onChanged: (value) => onChanged(value, null),
-            decoration: _dec(s.governorate),
           ),
         ),
         const SizedBox(width: 10),
         Expanded(
-child: DropdownButtonFormField<String>(
-  value: (selectedArea != null &&
-          areas[selectedGovernorate]?.contains(selectedArea) == true)
-      ? selectedArea
-      : null,
-  hint: Text(s.selectArea),
-  items: (selectedGovernorate != null
-          ? areas[selectedGovernorate] ?? []
-          : [])
-      .map((e) => DropdownMenuItem<String>(
-            value: e as String,
-            child: Text(e),
-          ))
-      .toList(),
-  onChanged: (value) => onChanged(selectedGovernorate, value),
-  decoration: _dec(s.area),
-),
-
+          child: CustomDropdownField<String>(
+            value: (selectedArea != null &&
+                    areas[selectedGovernorate]?.contains(selectedArea) == true)
+                ? selectedArea
+                : null,
+            hintText: s.selectArea,
+            label: s.area,
+            items: (selectedGovernorate != null
+                ? areas[selectedGovernorate] ?? []
+                : []),
+            onChanged: (value) => onChanged(selectedGovernorate, value),
+          ),
         ),
       ],
     );
