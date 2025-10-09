@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/hospital/views/hospital_view.dart';
 import 'package:medcare/features/pharmacy/pharmacy_view.dart';
 
 class BuildCategory extends StatelessWidget {
@@ -29,7 +30,14 @@ class BuildCategory extends StatelessWidget {
 
 
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HospitalView(),
+              ),
+            );
+          },
           child: _buildCategory(Icons.local_hospital_outlined, "Hospital"),
         ),
 

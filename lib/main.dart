@@ -29,8 +29,8 @@ class MedCare extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       locale: Locale('en'),
       home: const SplashView(),
-      locale: Locale('ar'),
-      home: const HomeServicesView(),
+      // locale: Locale('ar'),
+      // home: const HomeServicesView(),
     );
   }
 }
