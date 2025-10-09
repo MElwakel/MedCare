@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/pharmacy/shopping_basket/cart.dart';
+import 'package:medcare/features/pharmacy/shopping_basket/shopping_basket_view.dart';
 import 'package:provider/provider.dart';
 import '../controllers/pharmacy_controller.dart';
 import '../widgets/search_bar.dart';
@@ -9,9 +11,9 @@ class PharmacyBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => PharmacyController(),
-      child: Scaffold(
+    return 
+      
+       Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: Center(
@@ -34,7 +36,26 @@ class PharmacyBody extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           iconTheme: const IconThemeData(color: Colors.black),
+          actions: [
+            Consumer<Cart>(
+              builder: (context, cart, _) {
+                return Row(
+                  children: [
+                    Text(cart.count.toString()),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=>ShoppingBasketView()));
+                      },
+                      icon: const Icon(Icons.shopping_cart, size: 30),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ],
         ),
+         
 
         backgroundColor: Colors.grey[100],
         body: SafeArea(
@@ -69,7 +90,7 @@ class PharmacyBody extends StatelessWidget {
             },
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }
