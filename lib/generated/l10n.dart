@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
 
-// ************************************************************************** //
+// **************************************************************************
 // Generator: Flutter Intl IDE plugin
 // Made by Localizely
-// ************************************************************************** //
+// **************************************************************************
 
 // ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
 // ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
@@ -36,6 +36,7 @@ class S {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
+
       return instance;
     });
   }
@@ -54,235 +55,459 @@ class S {
   }
 
   /// `Welcome`
-  String get welcome => Intl.message('Welcome', name: 'welcome');
+  String get welcome {
+    return Intl.message('Welcome', name: 'welcome', desc: '', args: []);
+  }
 
   /// `Sign in to your account`
-  String get signInToYourAccount => Intl.message(
-        'Sign in to your account',
-        name: 'signInToYourAccount',
-      );
-
-  /// `Full Name`
-  String get fullName => Intl.message('Full Name', name: 'fullName');
+  String get signInToYourAccount {
+    return Intl.message(
+      'Sign in to your account',
+      name: 'signInToYourAccount',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Email`
-  String get email => Intl.message('Email', name: 'email');
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
 
   /// `Password`
-  String get password => Intl.message('Password', name: 'password');
-
-  /// `Confirm Password`
-  String get confirmPassword =>
-      Intl.message('Confirm Password', name: 'confirmPassword');
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
 
   /// `Sign In`
-  String get signIn => Intl.message('Sign In', name: 'signIn');
+  String get signIn {
+    return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
+  }
 
   /// `Forgot your password?`
-  String get forgotPassword =>
-      Intl.message('Forgot your password?', name: 'forgotPassword');
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot your password?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Or continue with social account`
-  String get orContinueWithSocialAccount => Intl.message(
-        'Or continue with social account',
-        name: 'orContinueWithSocialAccount',
-      );
+  String get orContinueWithSocialAccount {
+    return Intl.message(
+      'Or continue with social account',
+      name: 'orContinueWithSocialAccount',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Don't have an account? `
-  String get dontHaveAnAccount =>
-      Intl.message('Don\'t have an account? ', name: 'dontHaveAnAccount');
-
-  /// `Already have an account? `
-  String get alreadyHaveAnAccount =>
-      Intl.message('Already have an account? ', name: 'alreadyHaveAnAccount');
+  String get dontHaveAnAccount {
+    return Intl.message(
+      'Don\'t have an account? ',
+      name: 'dontHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Sign Up`
-  String get signUp => Intl.message('Sign Up', name: 'signUp');
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account? `
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Join MediCare!`
-  String get joinMediCare =>
-      Intl.message('Join MediCare!', name: 'joinMediCare');
+  String get joinMediCare {
+    return Intl.message(
+      'Join MediCare!',
+      name: 'joinMediCare',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Sign up easily, book your medical consultation, and stay healthy anytime`
-  String get signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime =>
-      Intl.message(
-        'Sign up easily, book your medical consultation, and stay healthy anytime',
-        name:
-            'signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime',
-      );
-
-  // 🩺 Medical Services Section
-  /// `Medical Service`
-  String get medicalService =>
-      Intl.message('Medical Service', name: 'medicalService');
-
-  /// `Surgical Operation`
-  String get surgicalOperation =>
-      Intl.message('Surgical Operation', name: 'surgicalOperation');
+  String get signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime {
+    return Intl.message(
+      'Sign up easily, book your medical consultation, and stay healthy anytime',
+      name: 'signUpEasilyBookYourMedicalConsultationAndStayHealthyAnytime',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Choose a Medical Service`
-  String get chooseMedicalService =>
-      Intl.message('Choose a Medical Service', name: 'chooseMedicalService');
+  String get chooseMedicalService {
+    return Intl.message(
+      'Choose a Medical Service',
+      name: 'chooseMedicalService',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Choose a Surgical Operation`
-  String get chooseSurgicalOperation => Intl.message(
-        'Choose a Surgical Operation',
-        name: 'chooseSurgicalOperation',
-      );
+  String get chooseSurgicalOperation {
+    return Intl.message(
+      'Choose a Surgical Operation',
+      name: 'chooseSurgicalOperation',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `Benefit from offers and see doctors' ratings before and after using the services.`
-  String get medicalServiceDesc => Intl.message(
-        "Benefit from offers and see doctors' ratings before and after using the services.",
-        name: 'medicalServiceDesc',
-      );
+  /// `Select from our list of medical services including consultations, diagnostics, and more.`
+  String get medicalServiceDesc {
+    return Intl.message(
+      'Select from our list of medical services including consultations, diagnostics, and more.',
+      name: 'medicalServiceDesc',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `Select the type of surgery, operation, governorate and area, or search by name.`
-  String get surgicalOperationDesc => Intl.message(
-        'Select the type of surgery, operation, governorate and area, or search by name.',
-        name: 'surgicalOperationDesc',
-      );
+  /// `Select your preferred surgical operation type and location.`
+  String get surgicalOperationDesc {
+    return Intl.message(
+      'Select your preferred surgical operation type and location.',
+      name: 'surgicalOperationDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical Service`
+  String get medicalService {
+    return Intl.message(
+      'Medical Service',
+      name: 'medicalService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Surgical Operation`
+  String get surgicalOperation {
+    return Intl.message(
+      'Surgical Operation',
+      name: 'surgicalOperation',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Select Service Type`
-  String get selectServiceType =>
-      Intl.message('Select Service Type', name: 'selectServiceType');
-
-  /// `Service Type`
-  String get serviceType =>
-      Intl.message('Service Type', name: 'serviceType');
+  String get selectServiceType {
+    return Intl.message(
+      'Select Service Type',
+      name: 'selectServiceType',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Select Service`
-  String get selectService =>
-      Intl.message('Select Service', name: 'selectService');
+  String get selectService {
+    return Intl.message(
+      'Select Service',
+      name: 'selectService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service Type`
+  String get serviceType {
+    return Intl.message(
+      'Service Type',
+      name: 'serviceType',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Service`
-  String get service => Intl.message('Service', name: 'service');
+  String get service {
+    return Intl.message('Service', name: 'service', desc: '', args: []);
+  }
 
   /// `Select Operation Type`
-  String get selectOperationType =>
-      Intl.message('Select Operation Type', name: 'selectOperationType');
-
-  /// `Operation Type`
-  String get operationType =>
-      Intl.message('Operation Type', name: 'operationType');
+  String get selectOperationType {
+    return Intl.message(
+      'Select Operation Type',
+      name: 'selectOperationType',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Select Operation`
-  String get selectOperation =>
-      Intl.message('Select Operation', name: 'selectOperation');
+  String get selectOperation {
+    return Intl.message(
+      'Select Operation',
+      name: 'selectOperation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operation Type`
+  String get operationType {
+    return Intl.message(
+      'Operation Type',
+      name: 'operationType',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Operation`
-  String get operation => Intl.message('Operation', name: 'operation');
+  String get operation {
+    return Intl.message('Operation', name: 'operation', desc: '', args: []);
+  }
 
   /// `Governorate`
-  String get governorate =>
-      Intl.message('Governorate', name: 'governorate');
+  String get governorate {
+    return Intl.message('Governorate', name: 'governorate', desc: '', args: []);
+  }
 
   /// `Select Area`
-  String get selectArea =>
-      Intl.message('Select Area', name: 'selectArea');
+  String get selectArea {
+    return Intl.message('Select Area', name: 'selectArea', desc: '', args: []);
+  }
 
   /// `Area`
-  String get area => Intl.message('Area', name: 'area');
+  String get area {
+    return Intl.message('Area', name: 'area', desc: '', args: []);
+  }
 
-  /// `Or type the service name here...`
-  String get orTypeServiceName =>
-      Intl.message('Or type the service name here...', name: 'orTypeServiceName');
+  /// `Or type the service name...`
+  String get orTypeServiceName {
+    return Intl.message(
+      'Or type the service name...',
+      name: 'orTypeServiceName',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `Or type the operation name here...`
-  String get orTypeOperationName => Intl.message(
-        'Or type the operation name here...',
-        name: 'orTypeOperationName',
-      );
+  /// `Or type the operation name...`
+  String get orTypeOperationName {
+    return Intl.message(
+      'Or type the operation name...',
+      name: 'orTypeOperationName',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Search`
-  String get search => Intl.message('Search', name: 'search');
-  /// `dentistry`
-  String get dentistry => Intl.message('dentistry', name: 'dentistry');
-  /// `cardiology`
-  String get cardiology => Intl.message('cardiology', name: 'cardiology');
-  /// `ophthalmology`
-  String get ophthalmology => Intl.message('ophthalmology', name: 'ophthalmology'); 
-  /// `orthopedics`
-  String get orthopedics => Intl.message('orthopedics', name: 'orthopedics');
-  /// `general surgery`
-  String get generalSurgery => Intl.message('general surgery', name: 'generalSurgery');
-  /// `plastic surgery`
-  String get plasticSurgery => Intl.message('plastic surgery', name: 'plasticSurgery');
-  /// `neurology`  
-  String get neurology => Intl.message('neurology', name: 'neurology');
-  /// `pediatrics`
-  String get pediatrics => Intl.message('pediatrics', name: 'pediatrics');
-  /// `dermatology`
-  String get dermatology => Intl.message('dermatology', name: 'dermatology');
-  /// `gynecology`  
-  String get gynecology => Intl.message('gynecology', name: 'gynecology');
-  /// `urology`  
-  String get urology => Intl.message('urology', name: 'urology');
-  /// `cataract surgery`
-  String get cataractSurgery => Intl.message('cataract surgery', name: 'cataractSurgery');
-  /// `heartSurgery` 
-  String get heartSurgery => Intl.message('heart surgery', name: 'heartSurgery');
-  /// `eyeSurgery`
-  String get eyeSurgery => Intl.message('eye Surgery', name: 'eyeSurgery');
-  /// `bypassSurgery `
-  String get bypassSurgery => Intl.message('bypass surgery', name: 'bypassSurgery');
-  /// `valueReplacement`
-  String get valveReplacement => Intl.message('valve replacement', name: 'valveReplacement');
-    /// `dentistry`
-    /// `cataract`
-  String get cataract => Intl.message('cataract', name: 'cataract');
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
 
-  /// `lasik`
-  String get lasik => Intl.message('lasik', name: 'lasik');
+  /// `Dentistry`
+  String get dentistry {
+    return Intl.message('Dentistry', name: 'dentistry', desc: '', args: []);
+  }
 
-  /// `rhinoplasty`
-  String get rhinoplasty => Intl.message('rhinoplasty', name: 'rhinoplasty');
+  /// `Cardiology`
+  String get cardiology {
+    return Intl.message('Cardiology', name: 'cardiology', desc: '', args: []);
+  }
 
-  /// `liposuction`
-  String get liposuction => Intl.message('liposuction', name: 'liposuction');
+  /// `Dermatology`
+  String get dermatology {
+    return Intl.message('Dermatology', name: 'dermatology', desc: '', args: []);
+  }
 
-  /// `appendectomy`
-  String get appendectomy => Intl.message('appendectomy', name: 'appendectomy');
+  /// `Pediatrics`
+  String get pediatrics {
+    return Intl.message('Pediatrics', name: 'pediatrics', desc: '', args: []);
+  }
 
-  /// `gallbladder removal`
-  String get gallbladderRemoval => Intl.message('gallbladder removal', name: 'gallbladderRemoval');
+  /// `Orthopedics`
+  String get orthopedics {
+    return Intl.message('Orthopedics', name: 'orthopedics', desc: '', args: []);
+  }
 
+  /// `Heart Surgery`
+  String get heartSurgery {
+    return Intl.message(
+      'Heart Surgery',
+      name: 'heartSurgery',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `assiut`
-  String get assiut => Intl.message('assiut', name: 'assiut');
+  /// `Eye Surgery`
+  String get eyeSurgery {
+    return Intl.message('Eye Surgery', name: 'eyeSurgery', desc: '', args: []);
+  }
 
-  /// `abnoub`
-  String get abnoub => Intl.message('abnoub', name: 'abnoub');
+  /// `Plastic Surgery`
+  String get plasticSurgery {
+    return Intl.message(
+      'Plastic Surgery',
+      name: 'plasticSurgery',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `manfalut`
-  String get manfalut => Intl.message('manfalut', name: 'manfalut');
+  /// `General Surgery`
+  String get generalSurgery {
+    return Intl.message(
+      'General Surgery',
+      name: 'generalSurgery',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `dairut`
-  String get dairut => Intl.message('dairut', name: 'dairut');
+  /// `Bypass Surgery`
+  String get bypassSurgery {
+    return Intl.message(
+      'Bypass Surgery',
+      name: 'bypassSurgery',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `elBadari`
-  String get elBadari => Intl.message('el badari', name: 'elBadari');
+  /// `Valve Replacement`
+  String get valveReplacement {
+    return Intl.message(
+      'Valve Replacement',
+      name: 'valveReplacement',
+      desc: '',
+      args: [],
+    );
+  }
 
-  /// `elQusiya`
-  String get elQusiya => Intl.message('el qusiya', name: 'elQusiya');
+  /// `Cataract`
+  String get cataract {
+    return Intl.message('Cataract', name: 'cataract', desc: '', args: []);
+  }
 
+  /// `Lasik`
+  String get lasik {
+    return Intl.message('Lasik', name: 'lasik', desc: '', args: []);
+  }
 
+  /// `Rhinoplasty`
+  String get rhinoplasty {
+    return Intl.message('Rhinoplasty', name: 'rhinoplasty', desc: '', args: []);
+  }
+
+  /// `Liposuction`
+  String get liposuction {
+    return Intl.message('Liposuction', name: 'liposuction', desc: '', args: []);
+  }
+
+  /// `Appendectomy`
+  String get appendectomy {
+    return Intl.message(
+      'Appendectomy',
+      name: 'appendectomy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gallbladder Removal`
+  String get gallbladderRemoval {
+    return Intl.message(
+      'Gallbladder Removal',
+      name: 'gallbladderRemoval',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Assiut`
+  String get assiut {
+    return Intl.message('Assiut', name: 'assiut', desc: '', args: []);
+  }
+
+  /// `Abnoub`
+  String get abnoub {
+    return Intl.message('Abnoub', name: 'abnoub', desc: '', args: []);
+  }
+
+  /// `Manfalut`
+  String get manfalut {
+    return Intl.message('Manfalut', name: 'manfalut', desc: '', args: []);
+  }
+
+  /// `Dairut`
+  String get dairut {
+    return Intl.message('Dairut', name: 'dairut', desc: '', args: []);
+  }
+
+  /// `El-Badari`
+  String get elBadari {
+    return Intl.message('El-Badari', name: 'elBadari', desc: '', args: []);
+  }
+
+  /// `El-Qusiya`
+  String get elQusiya {
+    return Intl.message('El-Qusiya', name: 'elQusiya', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
-  List<Locale> get supportedLocales => const [
-        Locale.fromSubtags(languageCode: 'en'),
-        Locale.fromSubtags(languageCode: 'ar'),
-      ];
+  List<Locale> get supportedLocales {
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+    ];
+  }
 
   @override
-  bool isSupported(Locale locale) =>
-      supportedLocales.any((l) => l.languageCode == locale.languageCode);
-
+  bool isSupported(Locale locale) => _isSupported(locale);
   @override
   Future<S> load(Locale locale) => S.load(locale);
-
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
+
+  bool _isSupported(Locale locale) {
+    for (var supportedLocale in supportedLocales) {
+      if (supportedLocale.languageCode == locale.languageCode) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

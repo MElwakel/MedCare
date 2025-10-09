@@ -22,25 +22,85 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "abnoub": MessageLookupByLibrary.simpleMessage("أبنوب"),
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "هل لديك حساب؟ ",
+    ),
+    "appendectomy": MessageLookupByLibrary.simpleMessage(
+      "استئصال الزائدة الدودية",
+    ),
+    "area": MessageLookupByLibrary.simpleMessage("المنطقة"),
+    "assiut": MessageLookupByLibrary.simpleMessage("أسيوط"),
+    "bypassSurgery": MessageLookupByLibrary.simpleMessage(
+      "جراحة الشرايين التاجية",
+    ),
+    "cardiology": MessageLookupByLibrary.simpleMessage("طب القلب"),
+    "cataract": MessageLookupByLibrary.simpleMessage("المياه البيضاء"),
+    "chooseMedicalService": MessageLookupByLibrary.simpleMessage(
+      "اختر الخدمة الطبية",
+    ),
+    "chooseSurgicalOperation": MessageLookupByLibrary.simpleMessage(
+      "اختر العملية الجراحية",
     ),
     "confirmPassword": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور",
     ),
+    "dairut": MessageLookupByLibrary.simpleMessage("ديروط"),
+    "dentistry": MessageLookupByLibrary.simpleMessage("طب الأسنان"),
+    "dermatology": MessageLookupByLibrary.simpleMessage("الأمراض الجلدية"),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب؟ ",
     ),
+    "elBadari": MessageLookupByLibrary.simpleMessage("البداري"),
+    "elQusiya": MessageLookupByLibrary.simpleMessage("القوصية"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "eyeSurgery": MessageLookupByLibrary.simpleMessage("جراحة العيون"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
     ),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "gallbladderRemoval": MessageLookupByLibrary.simpleMessage(
+      "استئصال المرارة",
+    ),
+    "generalSurgery": MessageLookupByLibrary.simpleMessage("الجراحة العامة"),
+    "governorate": MessageLookupByLibrary.simpleMessage("المحافظة"),
+    "heartSurgery": MessageLookupByLibrary.simpleMessage("جراحة القلب"),
     "joinMediCare": MessageLookupByLibrary.simpleMessage("انضم إلى MediCare!"),
+    "lasik": MessageLookupByLibrary.simpleMessage("تصحيح النظر (ليزك)"),
+    "liposuction": MessageLookupByLibrary.simpleMessage("شفط الدهون"),
+    "manfalut": MessageLookupByLibrary.simpleMessage("منفلوط"),
+    "medicalService": MessageLookupByLibrary.simpleMessage("خدمة طبية"),
+    "medicalServiceDesc": MessageLookupByLibrary.simpleMessage(
+      "اختر من قائمة خدماتنا الطبية التي تشمل الاستشارات والفحوصات والمزيد.",
+    ),
+    "operation": MessageLookupByLibrary.simpleMessage("العملية"),
+    "operationType": MessageLookupByLibrary.simpleMessage("نوع العملية"),
     "orContinueWithSocialAccount": MessageLookupByLibrary.simpleMessage(
       "أو المتابعة بحساب التواصل الاجتماعي",
     ),
+    "orTypeOperationName": MessageLookupByLibrary.simpleMessage(
+      "أو اكتب اسم العملية...",
+    ),
+    "orTypeServiceName": MessageLookupByLibrary.simpleMessage(
+      "أو اكتب اسم الخدمة...",
+    ),
+    "orthopedics": MessageLookupByLibrary.simpleMessage("العظام"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "pediatrics": MessageLookupByLibrary.simpleMessage("طب الأطفال"),
+    "plasticSurgery": MessageLookupByLibrary.simpleMessage("الجراحة التجميلية"),
+    "rhinoplasty": MessageLookupByLibrary.simpleMessage("تجميل الأنف"),
+    "search": MessageLookupByLibrary.simpleMessage("بحث"),
+    "selectArea": MessageLookupByLibrary.simpleMessage("اختر المنطقة"),
+    "selectOperation": MessageLookupByLibrary.simpleMessage("اختر العملية"),
+    "selectOperationType": MessageLookupByLibrary.simpleMessage(
+      "اختر نوع العملية",
+    ),
+    "selectService": MessageLookupByLibrary.simpleMessage("اختر الخدمة"),
+    "selectServiceType": MessageLookupByLibrary.simpleMessage(
+      "اختر نوع الخدمة",
+    ),
+    "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
+    "serviceType": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInToYourAccount": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول إلى حسابك",
@@ -50,98 +110,13 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "سجل بسهولة، احجز استشارتك الطبية، وابقَ بصحة جيدة في أي وقت",
         ),
-    "welcome": MessageLookupByLibrary.simpleMessage("اهلاً بكَ"),
-
-    "chooseMedicalService": MessageLookupByLibrary.simpleMessage(
-      "اختر خدمة طبية",
-    ),
-    "chooseSurgicalOperation": MessageLookupByLibrary.simpleMessage(
-      "اختر عملية جراحية",
-    ),
-    "medicalServiceDesc": MessageLookupByLibrary.simpleMessage(
-      "استفد من العروض وشاهد تقييمات الأطباء قبل وبعد استخدام الخدمات.",
-    ),
-    "surgicalOperationDesc": MessageLookupByLibrary.simpleMessage(
-      "اختر نوع الجراحة أو العملية، المحافظة والمنطقة، أو ابحث بالاسم.",
-    ),
-    "medicalService": MessageLookupByLibrary.simpleMessage("خدمة طبية"),
     "surgicalOperation": MessageLookupByLibrary.simpleMessage("عملية جراحية"),
-    "serviceType": MessageLookupByLibrary.simpleMessage("نوع الخدمة"),
-    "selectServiceType": MessageLookupByLibrary.simpleMessage(
-      "اختر نوع الخدمة",
+    "surgicalOperationDesc": MessageLookupByLibrary.simpleMessage(
+      "اختر نوع العملية الجراحية والموقع المناسب لك.",
     ),
-    "service": MessageLookupByLibrary.simpleMessage("الخدمة"),
-    "selectService": MessageLookupByLibrary.simpleMessage("اختر الخدمة"),
-    "operationType": MessageLookupByLibrary.simpleMessage("نوع العملية"),
-    "selectOperationType": MessageLookupByLibrary.simpleMessage(
-      "اختر نوع العملية",
+    "valveReplacement": MessageLookupByLibrary.simpleMessage(
+      "استبدال صمام القلب",
     ),
-    "operation": MessageLookupByLibrary.simpleMessage("العملية"),
-    "selectOperation": MessageLookupByLibrary.simpleMessage("اختر العملية"),
-    "governorate": MessageLookupByLibrary.simpleMessage("المحافظة"),
-    "selectArea": MessageLookupByLibrary.simpleMessage("اختر المنطقة"),
-    "area": MessageLookupByLibrary.simpleMessage("المنطقة"),
-    "orTypeServiceName": MessageLookupByLibrary.simpleMessage(
-      "أو اكتب اسم الخدمة هنا...",
-    ),
-    "orTypeOperationName": MessageLookupByLibrary.simpleMessage(
-      "أو اكتب اسم العملية هنا...",
-    ),
-    "search": MessageLookupByLibrary.simpleMessage("بحث"),
-    "medicalServices_dentistry": MessageLookupByLibrary.simpleMessage(
-      "طب الأسنان",
-    ),
-    "medicalServices_cardiology": MessageLookupByLibrary.simpleMessage(
-      "أمراض القلب",
-    ),
-    "medicalServices_dermatology": MessageLookupByLibrary.simpleMessage(
-      "الأمراض الجلدية",
-    ),
-    "medicalServices_pediatrics": MessageLookupByLibrary.simpleMessage(
-      "طب الأطفال",
-    ),
-    "medicalServices_orthopedics": MessageLookupByLibrary.simpleMessage(
-      "العظام",
-    ),
-
-    "operationType_heart": MessageLookupByLibrary.simpleMessage("جراحة القلب"),
-    "operationType_eye": MessageLookupByLibrary.simpleMessage("جراحة العيون"),
-    "operationType_plastic": MessageLookupByLibrary.simpleMessage(
-      "جراحة التجميل",
-    ),
-    "operationType_general": MessageLookupByLibrary.simpleMessage(
-      "الجراحة العامة",
-    ),
-
-    "operation_heart_bypass": MessageLookupByLibrary.simpleMessage(
-      "جراحة تحويل مسار",
-    ),
-    "operation_heart_valve": MessageLookupByLibrary.simpleMessage(
-      "استبدال الصمام",
-    ),
-    "operation_eye_cataract": MessageLookupByLibrary.simpleMessage(
-      "المياه البيضاء",
-    ),
-    "operation_eye_lasik": MessageLookupByLibrary.simpleMessage("الليزك"),
-    "operation_plastic_rhino": MessageLookupByLibrary.simpleMessage(
-      "تجميل الأنف",
-    ),
-    "operation_plastic_lipo": MessageLookupByLibrary.simpleMessage(
-      "شفط الدهون",
-    ),
-    "operation_general_appendectomy": MessageLookupByLibrary.simpleMessage(
-      "استئصال الزائدة",
-    ),
-    "operation_general_gallbladder": MessageLookupByLibrary.simpleMessage(
-      "استئصال المرارة",
-    ),
-
-    "governorate_assiut": MessageLookupByLibrary.simpleMessage("أسيوط"),
-
-    "area_abnoub": MessageLookupByLibrary.simpleMessage("أبنوب"),
-    "area_manfalut": MessageLookupByLibrary.simpleMessage("منفلوط"),
-    "area_dairut": MessageLookupByLibrary.simpleMessage("ديروط"),
-    "area_el_badari": MessageLookupByLibrary.simpleMessage("البداري"),
-    "area_el_qusiya": MessageLookupByLibrary.simpleMessage("القوصية"),
+    "welcome": MessageLookupByLibrary.simpleMessage("اهلاً بكَ"),
   };
 }
