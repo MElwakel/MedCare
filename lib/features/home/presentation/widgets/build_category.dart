@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/features/hospital/views/hospital_view.dart';
-import 'package:medcare/features/pharmacy/pharmacy_view.dart';
+import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
+import 'package:medcare/features/pharmacies/presentation/views/pharmacies_view.dart';
+
 
 class BuildCategory extends StatelessWidget {
   const BuildCategory({super.key});
@@ -11,7 +13,14 @@ class BuildCategory extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DoctorsView(),
+              ),
+            );
+          },
           child: _buildCategory(Icons.medical_services_outlined, "Doctor"),
         ),
 
@@ -21,7 +30,7 @@ class BuildCategory extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const PharmacyView(),
+                builder: (context) => const PharmaciesView(),
               ),
             );
           },
@@ -43,10 +52,13 @@ class BuildCategory extends StatelessWidget {
 
 
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+
+          },
           child: _buildCategory(Icons.emergency_outlined, "Ambulance"),
         ),
       ],
+
     );
   }
 }
@@ -74,3 +86,5 @@ Widget _buildCategory(IconData icon, String label, {VoidCallback? onTap}) {
     ),
   );
 }
+
+
