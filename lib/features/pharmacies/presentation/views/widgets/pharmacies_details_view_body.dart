@@ -11,23 +11,29 @@ class PharmacyDetailsViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            pharmacy.imageUrl,
-            width: double.infinity,
-            height: 250,
-            fit: BoxFit.cover,
-            errorBuilder:
-                (context, error, stackTrace) => Container(
-                  height: 250,
-                  color: Colors.grey[300],
-                  child: const Center(
-                    child: Icon(
-                      Icons.broken_image,
-                      size: 50,
-                      color: Colors.grey,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(16),
+              child: Image.asset(
+                pharmacy.imageUrl,
+                width: double.infinity,
+                height: 250,
+                fit: BoxFit.cover,
+                errorBuilder:
+                    (context, error, stackTrace) => Container(
+                      height: 250,
+                      color: Colors.grey[300],
+                      child: const Center(
+                        child: Icon(
+                          Icons.broken_image,
+                          size: 50,
+                          color: Colors.grey,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
