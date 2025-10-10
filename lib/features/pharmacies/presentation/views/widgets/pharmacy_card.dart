@@ -10,7 +10,7 @@ class PharmacyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Card(
         shape: RoundedRectangleBorder(
@@ -26,7 +26,7 @@ class PharmacyCard extends StatelessWidget {
               const BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
                 pharmacy.imageUrl,
-                height: 120,
+                height: 160,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -37,6 +37,8 @@ class PharmacyCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     pharmacy.name,
                     style: const TextStyle(
                       fontSize: 16,
@@ -45,6 +47,8 @@ class PharmacyCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     pharmacy.address,
                     style: TextStyle(
                       fontSize: 13,
