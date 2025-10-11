@@ -7,7 +7,7 @@ import 'package:medcare/features/auth/presentaion/views/verify_your_identity_vie
 import 'package:medcare/features/auth/presentaion/views/widgets/dont_have_an_account_widget.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/social_button.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
-import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
+import 'package:medcare/features/home/presentation/views/home_view.dart';
 import 'package:medcare/generated/l10n.dart';
 
 class SignInViewBody extends StatefulWidget {
@@ -59,7 +59,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DoctorsView()),
+                MaterialPageRoute(builder: (context) => HomePage()),
               );
             },
           ),
@@ -67,7 +67,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           Center(
             child: TextButton(
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => VerifyYourIdentity()),
                 );

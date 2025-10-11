@@ -6,6 +6,7 @@ import 'package:medcare/core/widgets/password_text_filed.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/already_have_an_account_widget.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/social_button.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/or_divider.dart';
+import 'package:medcare/features/home/presentation/views/home_view.dart';
 import 'package:medcare/generated/l10n.dart';
 
 
@@ -70,7 +71,9 @@ class SignUpScreenBody extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              CustomButton(text: S.of(context).signUp, onTap: () {}),
+              CustomButton(text: S.of(context).signUp, onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+              }),
 
               const SizedBox(height: 25),
 
