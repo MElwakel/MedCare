@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medcare/features/hospital/views/hospital_view.dart';
+import 'package:medcare/features/hospital/presentation/views/hospital_view.dart';
 import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
 import 'package:medcare/features/pharmacies/presentation/views/pharmacies_view.dart';
 

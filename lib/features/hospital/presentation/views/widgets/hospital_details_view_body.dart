@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/hospital/domain/entities/hospital_entity.dart';
 import 'package:readmore/readmore.dart';
 
-class HospitalDetailsView extends StatelessWidget {
-  const HospitalDetailsView({super.key});
-  final List<String> specialities = const [
-    "Oncology",
-    "Radiology",
-    "Surgery",
-    "Pediatrics",
-    "Pathology",
-    "Pharmacy",
-    "Nutrition",
-    "Psychology",
-  ];
+class HospitalDetailsViewBody extends StatelessWidget {
+  const HospitalDetailsViewBody({super.key, required this.hospital});
+  final HospitalEntity hospital;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,11 +22,11 @@ class HospitalDetailsView extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 30,
-                      backgroundImage: AssetImage('assets/images/57357.jpg'),
+                      backgroundImage: AssetImage(hospital.imageUrl),
                     ),
                     SizedBox(height: 24),
                     Text(
-                      "57357 Hospital",
+                      hospital.name,
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -43,7 +35,7 @@ class HospitalDetailsView extends StatelessWidget {
                     ),
                     SizedBox(height: 12),
                     Text(
-                      "Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102",
+                      hospital.address,
                       style: TextStyle(fontSize: 16, color: Colors.black54),
                     ),
                     SizedBox(height: 24),
@@ -53,7 +45,7 @@ class HospitalDetailsView extends StatelessWidget {
                         Icon(Icons.star, color: Colors.amber),
                         SizedBox(width: 4),
                         Text(
-                          "4.5",
+                          hospital.rating.toString(),
                           style: TextStyle(fontSize: 16, color: Colors.black38),
                         ),
                         SizedBox(width: 50),
@@ -63,7 +55,7 @@ class HospitalDetailsView extends StatelessWidget {
                         ),
                         SizedBox(width: 4),
                         Text(
-                          "50000",
+                          hospital.numberOfViews.toString(),
                           style: TextStyle(fontSize: 16, color: Colors.black38),
                         ),
                       ],
@@ -91,12 +83,12 @@ class HospitalDetailsView extends StatelessWidget {
                       height: 40,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
-                        itemCount: specialities.length,
+                        itemCount: hospital.specialties.length,
                         separatorBuilder: (context, index) => SizedBox(width: 12),
                         itemBuilder: (context, index) {
                           return Chip(
                             label: Text(
-                              specialities[index],
+                              hospital.specialties[index],
                               style: TextStyle(fontSize: 15),
                             ),
                             backgroundColor: Colors.blue.shade50,
