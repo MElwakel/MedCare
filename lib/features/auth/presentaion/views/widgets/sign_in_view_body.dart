@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/custom_text_form_field.dart';
 import 'package:medcare/core/widgets/password_text_filed.dart';
@@ -57,20 +58,19 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           CustomButton(
             text: S.of(context).signIn,
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()),
-              );
+              context.go(HomePage.id); 
+
             },
           ),
           const SizedBox(height: 16),
           Center(
+            
+            // forget your password ?
             child: TextButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => VerifyYourIdentity()),
-                );
+
+                context.go(VerifyYourIdentity.id); //here 
+
               },
               child: Text(
                 S.of(context).forgotPassword,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
 import 'package:medcare/generated/l10n.dart';
 
@@ -16,10 +17,8 @@ class AlreadyHaveAnAccountWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SignInView()),
-            );
+           context.go(SignInView.id);
+
           },
           child: Text(
             S.of(context).signIn,

@@ -5,6 +5,7 @@ import 'package:medcare/features/auth/presentaion/views/widgets/sign_up_screen_b
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
+  static const String id = '/signup';
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/features/auth/presentaion/views/email_verify_view.dart';
 import 'package:medcare/features/auth/presentaion/views/phone_verify_view.dart';
 import 'package:medcare/features/auth/presentaion/views/widgets/custom_list_tile.dart';
@@ -39,10 +40,7 @@ class VerifyYourIdentityBody extends StatelessWidget {
 
               CustomListTile(
                 onTab: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PhoneVerifyView()),
-                  );
+                 context.go(PhoneNumberVerifyView.id);
                 },
                 title: 'Phone Number',
                 subtitle: 'Verify with your Phone Number ',
@@ -53,10 +51,7 @@ class VerifyYourIdentityBody extends StatelessWidget {
 
               CustomListTile(
                 onTab: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EmailVerifyView()),
-                  );
+                 context.go(EmailVerifyView.id);
                 },
                 title: 'Email',
                 subtitle: 'Verify with your email',

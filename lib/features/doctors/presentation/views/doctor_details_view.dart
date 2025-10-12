@@ -4,6 +4,8 @@ import 'package:medcare/features/doctors/presentation/views/widgets/doctor_datai
 class DoctorDetials extends StatelessWidget {
   const DoctorDetials({super.key});
 
+  static const String id = '/doctordetials';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/features/auth/presentaion/views/sign_up_screen.dart';
 import 'package:medcare/generated/l10n.dart';
 
@@ -16,10 +17,7 @@ class DontHaveAnAccountWidget extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SignUpScreen()),
-            );
+          context.go(SignUpScreen.id); // here2
           },
           child: Text(
             S.of(context).signUp,

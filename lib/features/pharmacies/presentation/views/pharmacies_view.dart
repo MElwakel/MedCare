@@ -5,6 +5,8 @@ import '../../../../core/helpers/build_custom_app_bar.dart';
 class PharmaciesView extends StatelessWidget {
   const PharmaciesView({super.key});
 
+  static const String id = '/pharmaciesview';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/core/widgets/custom_button.dart';
 import 'package:medcare/core/widgets/password_text_filed.dart';
 import 'package:medcare/features/home/presentation/views/home_view.dart';
@@ -44,10 +45,8 @@ class CreateNewPasswordViewBody extends StatelessWidget {
             CustomButton(
               text: "Confirm New Password",
               onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
+               context.go(HomePage.id);
+
               },
             ),
           ],

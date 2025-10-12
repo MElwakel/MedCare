@@ -4,6 +4,8 @@ import 'package:medcare/features/auth/presentaion/views/widgets/verify_your_iden
 class VerifyYourIdentity extends StatelessWidget {
   const VerifyYourIdentity({super.key});
 
+   static const String id = '/verfiyIdentity';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

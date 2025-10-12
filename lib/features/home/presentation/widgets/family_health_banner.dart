@@ -28,20 +28,23 @@ class FamilyHealthBanner extends StatelessWidget {
                     color: Colors.black87,
                   ),
                 ),
-                const SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  child: const Text(
-                    "Learn more",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
+
+                // const SizedBox(height: 10),
+
+                // ElevatedButton(
+                //   onPressed: () {},
+                //   style: ElevatedButton.styleFrom(
+                //     backgroundColor: Colors.green,
+                //     shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(12),
+                //     ),
+                //   ),
+                //   child: const Text(
+                //     "Med Care",
+                //     style: TextStyle(color: Colors.white),
+                //   ),
+                // ),
+
               ],
             ),
           ),
@@ -49,7 +52,7 @@ class FamilyHealthBanner extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
-              'assets/images/7xm 6.png',
+              'assets/images/logo.png',
               width: 110,
               height: 150,
               fit: BoxFit.cover,

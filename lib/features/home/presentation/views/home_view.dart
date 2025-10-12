@@ -6,6 +6,8 @@ import 'package:medcare/features/home/presentation/widgets/button_navigation_bar
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+   static const String id = '/home';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

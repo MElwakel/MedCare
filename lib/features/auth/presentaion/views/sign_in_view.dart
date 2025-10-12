@@ -5,6 +5,8 @@ import 'widgets/sign_in_view_body.dart';
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
 
+  static const String id = '/signin';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

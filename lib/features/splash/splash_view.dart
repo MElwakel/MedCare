@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -12,14 +13,17 @@ class SplashView extends StatefulWidget {
 class _SplashScreenState extends State<SplashView> {
 
   @override
-  void initState() {
-    super.initState();
-    Future.delayed(Duration(seconds: 2),(){
-     // ignore: use_build_context_synchronously
-     Navigator.pushReplacement(context,
-      MaterialPageRoute(builder: (context)=>SignInView()),);
-    },);
-  }
+  @override
+void initState() {
+  super.initState();
+
+  Future.delayed(const Duration(seconds: 2), () {
+    if (mounted) {
+      context.go(SignInView.id);
+    }
+  });
+}
+
 
   @override
   Widget build(BuildContext context) {

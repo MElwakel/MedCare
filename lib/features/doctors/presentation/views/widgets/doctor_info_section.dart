@@ -7,6 +7,8 @@ class DoctorInfoSection extends StatelessWidget {
 String text =
       "Dr. Matthew Burke is the leading cardiologist at Nanyang Hospital. He has received numerous awards for his outstanding contributions to the medical field. He offers private consultations and has over 20 years of experience in diagnosing and treating complex heart conditions. Dr. Burke is known for his compassionate approach to patients and his meticulous attention to detail, ensuring the highest standard of care. He is currently developing innovative programs for heart disease prevention and is considered a leading medical authority in the region.";
 
+  DoctorInfoSection({super.key});
+
  
   
   @override

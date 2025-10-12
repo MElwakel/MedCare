@@ -4,6 +4,8 @@ import 'package:medcare/features/doctors/presentation/views/widgets/doctors_view
 class DoctorsView extends StatelessWidget {
   const DoctorsView({super.key});
 
+  static const String id = '/doctorsview';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

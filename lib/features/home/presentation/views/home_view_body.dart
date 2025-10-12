@@ -59,13 +59,13 @@ class HomeViewBody extends StatelessWidget {
                           color: Colors.black87,
                         ),
                       ),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.green,
-                        ),
-                      ),
+                      // Text(
+                      //   "See all",
+                      //   style: TextStyle(
+                      //     fontSize: 14,
+                      //     color: Colors.green,
+                      //   ),
+                      // ),
                     ],
                   ),
                   const SizedBox(height: 12),

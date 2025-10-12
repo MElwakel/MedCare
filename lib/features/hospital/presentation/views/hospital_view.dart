@@ -5,6 +5,8 @@ import 'package:medcare/features/hospital/presentation/views/widgets/hospitals_v
 class HospitalView extends StatelessWidget {
   const HospitalView({super.key});
 
+  static const String id = '/hospitalview';
+
   
   @override
   Widget build(BuildContext context) {
