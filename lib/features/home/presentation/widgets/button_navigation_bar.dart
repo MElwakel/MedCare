@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medcare/features/chat/presentation/views/all_chat_view.dart';
+import 'package:medcare/features/home/presentation/views/home_view.dart';
 
-class ButtonNavigationBar extends StatefulWidget {
-  const ButtonNavigationBar({super.key});
-
-  @override
-  State<ButtonNavigationBar> createState() => _ButtonNavigationBarState();
-}
-
-class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+class ButtonNavigationBar extends StatelessWidget {
+  final int selectedIndex;
+  const ButtonNavigationBar({super.key, required this.selectedIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +13,23 @@ class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
       type: BottomNavigationBarType.fixed,
       selectedItemColor: Colors.green,
       unselectedItemColor: Colors.grey,
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
+      currentIndex: selectedIndex,
+      onTap: (index) {
+        switch (index) {
+          case 0:
+            context.go(HomePage.id);
+            break;
+          case 1:
+            //context.go('/sechdule');
+            break;
+          case 2:
+            context.go(AllChatView.id);
+            break;
+          case 3:
+            //context.go('/profile');
+            break;
+        }
+      },
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: "Schedule"),

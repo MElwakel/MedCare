@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body:HomeViewBody(),
 
       // ===== Bottom Navigation Bar =====
-      bottomNavigationBar:ButtonNavigationBar()
+      bottomNavigationBar:ButtonNavigationBar(selectedIndex: 0,)
     );
   }
 

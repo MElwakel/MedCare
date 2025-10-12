@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:medcare/features/home/presentation/views/home_view.dart';
-import 'package:medcare/features/splash/splash_view.dart';
 import 'core/router/app_router.dart';
 
 import 'generated/l10n.dart';
