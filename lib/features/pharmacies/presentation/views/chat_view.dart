@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/features/home/presentation/widgets/button_navigation_bar.dart';
 import 'package:medcare/features/pharmacies/presentation/views/widgets/chat_view_body.dart';
 import '../../domain/entities/pharmacy_entity.dart';
 
@@ -6,7 +7,7 @@ import '../../domain/entities/pharmacy_entity.dart';
 class ChatView extends StatelessWidget {
   const ChatView({super.key, required this.pharmacy});
   final PharmacyEntity pharmacy;
-
+  static const String id = '/chatView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +32,7 @@ class ChatView extends StatelessWidget {
         ),
       ),
       body: ChatViewBody(pharmacy: pharmacy),
+      bottomNavigationBar: ButtonNavigationBar(selectedIndex: 0),
     );
   }
 }

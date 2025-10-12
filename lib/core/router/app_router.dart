@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medcare/features/auth/presentaion/views/create_new_password_view.dart';
 import 'package:medcare/features/auth/presentaion/views/email_verify_view.dart';
@@ -7,6 +6,7 @@ import 'package:medcare/features/auth/presentaion/views/sign_in_view.dart';
 import 'package:medcare/features/auth/presentaion/views/sign_up_screen.dart';
 import 'package:medcare/features/auth/presentaion/views/verify_your_code_view.dart';
 import 'package:medcare/features/auth/presentaion/views/verify_your_identity_view.dart';
+import 'package:medcare/features/chat/presentation/views/all_chat_view.dart';
 import 'package:medcare/features/doctors/presentation/views/doctor_details_view.dart';
 import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
 import 'package:medcare/features/home/presentation/views/home_view.dart';
@@ -77,6 +77,11 @@ final GoRouter appRouter = GoRouter(
      GoRoute(
       path: '/doctordetials',
       builder: (context, state) => const DoctorDetials(),
+    ),
+
+    GoRoute(
+      path: AllChatView.id,
+      builder: (context, state) => const AllChatView(),
     ),
 
   ],
