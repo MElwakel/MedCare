@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../utiles/app_colors.dart';
 
 class BackIconWidget extends StatelessWidget {
@@ -9,7 +8,7 @@ class BackIconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.pop(context);
+
       },
       child: Container(
         height: 35,
