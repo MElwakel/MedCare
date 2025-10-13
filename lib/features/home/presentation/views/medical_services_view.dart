@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medcare/features/home/presentation/views/data/services_data.dart';
 import 'package:medcare/generated/l10n.dart';
-import 'widgets/service_tabs.dart';
-import 'widgets/medical_section.dart';
-import 'widgets/surgical_section.dart';
+import '../widgets/service_tabs.dart';
+import '../widgets/medical_section.dart';
+import '../widgets/surgical_section.dart';
 
 class MedicalServicesView extends StatefulWidget {
   const MedicalServicesView({super.key});

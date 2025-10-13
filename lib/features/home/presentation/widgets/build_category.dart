@@ -15,7 +15,7 @@ class BuildCategory extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-           context.go(DoctorsView.id);
+            context.push(DoctorsView.id);
           },
           child: _buildCategory(Icons.medical_services_outlined, "Doctor"),
         ),
@@ -23,7 +23,7 @@ class BuildCategory extends StatelessWidget {
         // ------الصيدليات
         GestureDetector(
           onTap: () {
-           context.go(PharmaciesView.id);
+           context.push(PharmaciesView.id);
           },
           child: _buildCategory(Icons.local_pharmacy_outlined, "Pharmacy"),
         ),
@@ -31,7 +31,7 @@ class BuildCategory extends StatelessWidget {
 
         GestureDetector(
           onTap: () {
-           context.go(HospitalView.id);
+            context.push(HospitalView.id);
           },
           child: _buildCategory(Icons.local_hospital_outlined, "Hospital"),
         ),

@@ -9,6 +9,7 @@ import 'package:medcare/features/auth/presentaion/views/verify_your_identity_vie
 import 'package:medcare/features/chat/presentation/views/all_chat_view.dart';
 import 'package:medcare/features/doctors/presentation/views/doctor_details_view.dart';
 import 'package:medcare/features/doctors/presentation/views/doctors_view.dart';
+import 'package:medcare/features/home/presentation/views/article_view.dart';
 import 'package:medcare/features/home/presentation/views/home_view.dart';
 import 'package:medcare/features/hospital/presentation/views/hospital_view.dart';
 import 'package:medcare/features/pharmacies/presentation/views/pharmacies_view.dart';
@@ -84,7 +85,12 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const AllChatView(),
     ),
 
+     GoRoute(
+      path:'/articlepageview',
+      builder: (context, state) => const ArticlePageView(),
+    ),
+
   ],
 );
 
-//DoctorDetials
+//ArticlePageView
