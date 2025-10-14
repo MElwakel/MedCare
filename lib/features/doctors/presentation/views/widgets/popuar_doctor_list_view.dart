@@ -9,7 +9,7 @@ class PopularDoctorListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      scrollDirection: Axis.horizontal,
+      scrollDirection: Axis.vertical,
       itemBuilder: (context, index) {
         return GestureDetector(onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorDetials()));
