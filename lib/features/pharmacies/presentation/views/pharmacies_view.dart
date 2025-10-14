@@ -10,7 +10,7 @@ class PharmaciesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: 'pharmacies'),
+      appBar: buildCustomAppBar(title: 'pharmacies',showBackButton: true),
       body: const PharmaciesViewBody(),
     );
   }

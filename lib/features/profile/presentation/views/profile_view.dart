@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medcare/core/helpers/build_custom_app_bar.dart';
 import 'package:medcare/features/profile/presentation/views/widgets/profile_view_body.dart';
 
 import '../../../home/presentation/widgets/button_navigation_bar.dart';
@@ -10,6 +11,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: buildCustomAppBar(title: 'MedCare Profile',showBackButton: false),
       body: ProfileViewBody(),
       bottomNavigationBar: ButtonNavigationBar(selectedIndex: 3),
     );

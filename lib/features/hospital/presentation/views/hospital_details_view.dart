@@ -10,7 +10,7 @@ class HospitalDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: 'Hospital Details'),
+      appBar: buildCustomAppBar(title: 'Hospital Details',showBackButton: true),
 
       body: HospitalDetailsViewBody(hospital: hospital),
 

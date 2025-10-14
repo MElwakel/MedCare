@@ -10,7 +10,7 @@ class PharmacyDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: 'Pharmacy Details'),
+      appBar: buildCustomAppBar(title: 'Pharmacy Details',showBackButton: true),
 
       body: PharmacyDetailsViewBody(pharmacy: pharmacy),
 

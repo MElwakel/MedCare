@@ -10,7 +10,7 @@ class ScheduleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: 'MedCare Schedule'),
+      appBar: buildCustomAppBar(title: 'MedCare Schedule',showBackButton: false),
       body: ScheduleViewBody(),
       bottomNavigationBar: ButtonNavigationBar(selectedIndex: 1)
     );

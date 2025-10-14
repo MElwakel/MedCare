@@ -11,7 +11,7 @@ class HospitalView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: 'hospitals'),
+      appBar: buildCustomAppBar(title: 'hospitals',showBackButton: true),
       backgroundColor: const Color(0xffF7F9FB),
       body:  const HospitalsViewBody(),
     );

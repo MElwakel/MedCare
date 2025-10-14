@@ -10,7 +10,7 @@ class AllChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(title: "MedCare Chats"),
+      appBar: buildCustomAppBar(title: "MedCare Chats", showBackButton: false),
       body: AllChatViewBody(),
       bottomNavigationBar: ButtonNavigationBar(selectedIndex: 2),
 
