@@ -13,6 +13,7 @@ import 'package:medcare/features/home/presentation/views/article_view.dart';
 import 'package:medcare/features/home/presentation/views/home_view.dart';
 import 'package:medcare/features/hospital/presentation/views/hospital_view.dart';
 import 'package:medcare/features/pharmacies/presentation/views/pharmacies_view.dart';
+import 'package:medcare/features/profile/presentation/views/profile_view.dart';
 import 'package:medcare/features/schedule/presentation/views/schedule_view.dart';
 import 'package:medcare/features/splash/splash_view.dart';
 
@@ -93,6 +94,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: ScheduleView.id,
       builder: (context, state) => const ScheduleView(),
+    ),
+    GoRoute(
+      path: ProfileView.id,
+      builder: (context, state) => const ProfileView(),
     ),
   ],
 );
